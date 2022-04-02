@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Infinite Scroller Template</title>
+</head>
+<style>
+	#container {
+		text-align: center;
+		font-size: 96px;
+	}
+</style>
+<body>
+	
+    
+  	<div id='container'>
+
+    </div>
+</body>
+<body onload="fillData(); fillData(); fillData(); fillData(); fillData(); fillData(); fillData(); fillData(); fillData(); fillData(); fillData(); fillData(); fillData(); fillData(); fillData(); fillData(); ">
+</body>
+<element onscroll="fillData()">
+<script>
+	let fillData = () => {
+        let ele = document.getElementById('container');
+        ele.innerHTML += 'Test<br>';
+    }
+	window.onscroll = function(e) {
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+        fillData()
+		fillData()
+		fillData()
+		fillData()
+		fillData()
+		fillData()
+		fillData()
+		fillData()
+		fillData()
+    }
+};
+
+
+	setInterval(function() {
+ }, 1 );
+</script>
+</html>
