@@ -8,10 +8,18 @@
 		text-align: center;
 		font-size: 96px;
 	}
+	#notcontainer {
+		position: fixed;
+		top: 20px;
+		right: 20px;
+		font-size: 48px;
+	}
 </style>
 <body>
-	
-    
+	<div id='notcontainer'>
+		<span id="count">0</span>
+	</div>
+		
   	<div id='container'>
 
     </div>
@@ -20,9 +28,13 @@
 </body>
 <element onscroll="fillData()">
 <script>
+	var count = 0
+	
 	let fillData = () => {
         let ele = document.getElementById('container');
-        ele.innerHTML += 'SCROLL!<br>';
+        ele.innerHTML += 'Scroll<br>';
+		count = count + 1;
+		document.getElementById("count").innerHTML = count;
     }
 	window.onscroll = function(e) {
     if ((window.innerHeight + window.scrollY) <= document.body.offsetHeight) {
